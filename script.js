@@ -1,12 +1,146 @@
 const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
+const mainNav = document.getElementById('mainNav');
 
-if (menuToggle && navMenu) {
+if (menuToggle && mainNav) {
   menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
+    mainNav.classList.toggle('open');
   });
 
-  navMenu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => navMenu.classList.remove('open'));
+  mainNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => mainNav.classList.remove('open'));
   });
 }
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach((item) => {
+  const button = item.querySelector('.faq-question');
+
+  button.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+
+    faqItems.forEach((faqItem) => {
+      faqItem.classList.remove('open');
+    });
+
+    if (!isOpen) {
+      item.classList.add('open');
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
